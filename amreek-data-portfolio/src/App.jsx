@@ -38,8 +38,8 @@ const projectData = [
     accent: "violet",
     visual: "churn",
     metric: "Retention insights",
-    githubUrl: "",
-    demoUrl: ""
+    githubUrl: "https://github.com/amreek2000-oss/Customer-Churn-Retention-Analysis.git",
+    
   },
   {
     number: "02",
@@ -51,7 +51,7 @@ const projectData = [
     visual: "retail",
     metric: "Sales & stock trends",
     githubUrl: "https://github.com/amreek2000-oss/Retail-Sales-Inventory-Optimization",
-    demoUrl: ""
+    
   },
   {
     number: "03",
@@ -62,8 +62,8 @@ const projectData = [
     accent: "orange",
     visual: "student",
     metric: "Performance patterns",
-    githubUrl: "",
-    demoUrl: ""
+    githubUrl: "https://github.com/amreek2000-oss/Sales-forecasting-system.....git",
+   
   }
 ];
 
