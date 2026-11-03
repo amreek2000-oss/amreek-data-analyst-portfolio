@@ -38,7 +38,8 @@ const projectData = [
     accent: "violet",
     visual: "churn",
     metric: "Retention insights",
-    link: "#contact"
+    githubUrl: "",
+    demoUrl: ""
   },
   {
     number: "02",
@@ -49,7 +50,8 @@ const projectData = [
     accent: "cyan",
     visual: "retail",
     metric: "Sales & stock trends",
-    link: "#contact"
+    githubUrl: "https://github.com/amreek2000-oss/Retail-Sales-Inventory-Optimization",
+    demoUrl: ""
   },
   {
     number: "03",
@@ -60,7 +62,8 @@ const projectData = [
     accent: "orange",
     visual: "student",
     metric: "Performance patterns",
-    link: "#contact"
+    githubUrl: "",
+    demoUrl: ""
   }
 ];
 
@@ -114,7 +117,26 @@ function ProjectCard({ project }) {
       <h3>{project.title}</h3>
       <p>{project.description}</p>
       <div className="tool-tags">{project.tools.map(tool=><span key={tool}>{tool}</span>)}</div>
-      <a className="project-link" href={project.link}>Discuss this project <ArrowUpRight size={16}/></a>
+      <div className="project-actions">
+        {project.githubUrl ? (
+          <a className="project-action project-action-primary" href={project.githubUrl} target="_blank" rel="noreferrer">
+            <Github size={15}/> GitHub <ArrowUpRight size={14}/>
+          </a>
+        ) : (
+          <span className="project-action project-action-disabled" aria-disabled="true">
+            <Github size={15}/> GitHub coming soon
+          </span>
+        )}
+        {project.demoUrl ? (
+          <a className="project-action project-action-secondary" href={project.demoUrl} target="_blank" rel="noreferrer">
+            View Demo <ExternalLink size={14}/>
+          </a>
+        ) : (
+          <span className="project-action project-action-disabled" aria-disabled="true">
+            View Demo coming soon
+          </span>
+        )}
+      </div>
     </div>
   </article>;
 }
